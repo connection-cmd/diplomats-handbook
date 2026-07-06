@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://connection-cmd.github.io/diplomats-handbook/sitemap.xml
