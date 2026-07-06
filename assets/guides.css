@@ -1,0 +1,79 @@
+/* The Diplomat's Handbook — shared styling for guide articles.
+   Reuses the brand tokens from the homepage. */
+:root{
+  --paper:#faf6ed; --ivory:#f4efe6; --cream:#ebe4d6; --ink:#1a1814;
+  --terracotta:#a83020; --accent-deep:#8b2418; --gold:#a07d3a; --green:#5a6b3b;
+  --muted:#6b6255;
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,'Times New Roman',serif;
+  background:var(--paper); color:var(--ink); line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent-deep)}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+.topbar{border-bottom:1px solid var(--cream);background:linear-gradient(180deg,var(--ivory),var(--paper))}
+.topbar .row{max-width:760px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:12px}
+.topbar img{width:34px;height:34px;border-radius:8px}
+.topbar .name{font-weight:700;letter-spacing:-.2px}
+.topbar .name a{color:var(--ink);text-decoration:none}
+.topbar .spacer{flex:1}
+.topbar .nav a{color:var(--accent-deep);text-decoration:none;font-size:.95rem;margin-left:16px}
+.topbar .nav a:hover{text-decoration:underline}
+
+/* article */
+article{padding:44px 0 8px}
+.kicker{display:inline-block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+article h1{font-size:2.3rem;line-height:1.15;letter-spacing:-.5px;margin-bottom:14px}
+article .standfirst{font-size:1.22rem;color:var(--muted);margin-bottom:8px}
+article .byline{font-size:.9rem;color:var(--muted);margin-bottom:28px}
+article h2{font-size:1.5rem;letter-spacing:-.3px;margin:36px 0 10px}
+article h3{font-size:1.18rem;color:var(--accent-deep);margin:24px 0 6px}
+article p{margin:0 0 16px;font-size:1.08rem}
+article ul,article ol{margin:0 0 18px 1.2em}
+article li{margin-bottom:8px;font-size:1.06rem}
+article strong{color:var(--ink)}
+.divider{width:46px;height:3px;background:var(--gold);border-radius:3px;margin:30px 0;opacity:.6}
+
+/* script / example box */
+.script{background:var(--cream);border-radius:14px;padding:20px 22px;border:1px solid #ddd3c0;margin:0 0 20px}
+.script .label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.script p{font-style:italic;margin:0}
+.line{background:var(--ivory);border-radius:10px;padding:12px 16px;margin:0 0 10px;border-left:4px solid var(--cream)}
+.line.best{border-left-color:var(--green)}
+.line.mid{border-left-color:var(--gold)}
+.line.miss{border-left-color:var(--terracotta)}
+.line .label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
+
+/* app CTA card */
+.appcta{background:linear-gradient(180deg,var(--ivory),var(--paper));border:1px solid var(--cream);
+  border-radius:16px;padding:28px 26px;text-align:center;margin:36px 0}
+.appcta img{width:60px;height:60px;border-radius:14px;box-shadow:0 6px 20px rgba(138,36,24,.16)}
+.appcta h2{margin:12px 0 6px;font-size:1.35rem}
+.appcta p{color:var(--muted);max-width:520px;margin:0 auto 18px;font-size:1rem}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-size:1rem;text-decoration:none;font-weight:700;
+  transition:transform .12s ease,box-shadow .12s ease}
+.btn-primary{background:var(--terracotta);color:var(--paper);box-shadow:0 4px 16px rgba(168,48,32,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(168,48,32,.34)}
+
+/* FAQ */
+.faq{margin-top:8px}
+.faq h3{margin-bottom:4px}
+.faq p{color:var(--muted)}
+
+/* related */
+.related{border-top:1px solid var(--cream);margin-top:36px;padding-top:26px}
+.related h2{font-size:1.2rem;margin:0 0 12px}
+.related ul{list-style:none;margin:0}
+.related li{margin-bottom:8px}
+
+/* footer */
+footer{border-top:1px solid var(--cream);padding:34px 24px 48px;text-align:center;color:var(--muted);font-size:.9rem;margin-top:40px}
+footer a{margin:0 8px;white-space:nowrap}
+
+@media(max-width:560px){ article h1{font-size:1.85rem} .wrap{padding:0 18px} }
